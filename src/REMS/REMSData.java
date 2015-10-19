@@ -5,9 +5,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import main.REMS;
 
@@ -66,7 +65,7 @@ public class REMSData {
 	}
 
 	public void writeJSONData() {
-		String myFilePath = "/Users/Chavda/Desktop/REMSDATA.json";
+		String myFilePath = "C://REMSDATA.json";
 
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
@@ -98,7 +97,7 @@ public class REMSData {
 
 	public JSONObject readJSONData() {
 	
-		String myFilePath = "/Users/Chavda/Desktop/REMSDATA.json";
+		String myFilePath = "C:/REMSDATA.json";
 		
 		// JSONParser is used to parse the data
 		JSONParser parser = new JSONParser();
@@ -116,7 +115,7 @@ public class REMSData {
 		} catch (IOException e) {
 			System.out.println("I/O exception found.");
 			e.printStackTrace();
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			System.out.println("Parse exception found.");
 			e.printStackTrace();
 		}
@@ -127,7 +126,7 @@ public class REMSData {
 	
 	public String getJSONFilePath()
 	{
-		String myFilePath = "/Users/Chavda/Desktop/REMSDATA.json";
+		String myFilePath = "C:/REMSDATA.json";
 		
 		return myFilePath;
 	}
